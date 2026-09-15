@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TIMEVAULT - Modern watch store">
+  <title>TIMEVAULT | Premium Watches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home"><span>TIME</span>VAULT</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" title="Toggle theme">☾</button>
+        <button class="icon-btn cart-btn" id="cartBtn" title="Shopping cart">🛒<b id="cartCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">TIME • STYLE • PRECISION</p>
+          <h1>Time, <em>elevated.</em></h1>
+          <p class="hero-text">Discover carefully selected watches that combine timeless design, modern engineering, and everyday confidence.</p>
+          <div class="hero-buttons">
+            <a class="btn primary" href="#shop">Explore Collection</a>
+            <a class="btn secondary" href="#about">Our Story</a>
+          </div>
+          <div class="stats">
+            <div><strong>50+</strong><span>Watch styles</span></div>
+            <div><strong>4.9/5</strong><span>Customer rating</span></div>
+            <div><strong>Fast</strong><span>Nationwide delivery</span></div>
+          </div>
+        </div>
+        <div class="hero-watch">
+          <div class="glow"></div>
+          <img src="https://www.casio.com/content/dam/casio/product-info/locales/us/en/timepiece/product/watch/G/GM/GM2/gm-2110d-2a/assets/GM-2110D-2A.png.transform/main-visual-pc/image.png" alt="Premium Casio watch" onerror="this.src='https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1000&q=85'">
+          <span class="floating-tag">NEW<br><small>COLLECTION</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">THE COLLECTION</p>
+            <h2>Find your perfect <em>watch.</em></h2>
+          </div>
+          <div class="controls">
+            <div class="search-wrap">⌕<input id="searchInput" type="search" placeholder="Search watches..."></div>
+          </div>
+        </div>
+
+        <div class="filter-row" id="filters">
+          <button class="filter active" data-filter="all">All Watches</button>
+          <button class="filter" data-filter="men">Men</button>
+          <button class="filter" data-filter="women">Women</button>
+          <button class="filter" data-filter="luxury">Luxury</button>
+          <button class="filter" data-filter="sport">Sport</button>
+        </div>
+
+        <div class="products" id="products"></div>
+        <p class="empty" id="emptyState" hidden>No watches match your search.</p>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div class="container promo-inner">
+        <div>
+          <p class="eyebrow">TIMEVAULT MEMBERS</p>
+          <h2>10% off your first order.</h2>
+          <p>Join our mailing list for collection launches and exclusive offers.</p>
+        </div>
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+          <button class="btn primary" type="submit">Join Now</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=85" alt="Classic wrist watch">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">ABOUT TIMEVAULT</p>
+          <h2>Built around a love for <em>great watches.</em></h2>
+          <p>TIMEVAULT is a student-built e-commerce concept created to showcase a clean, modern online shopping experience for watches.</p>
+          <p>Our collection focuses on recognizable designs, useful specifications, and an easy shopping journey. This demo uses front-end technology only, so no database or server is required.</p>
+          <div class="feature-list">
+            <div><span>✓</span><div><strong>Curated selection</strong><small>Styles for every occasion</small></div></div>
+            <div><span>✓</span><div><strong>Easy shopping</strong><small>Simple cart and checkout</small></div></div>
+            <div><span>✓</span><div><strong>Responsive design</strong><small>Works on phone and desktop</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-box">
+        <div>
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h2>Have a question?</h2>
+          <p>Send us a message and our team will get back to you.</p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input id="contactName" type="text" placeholder="Your name" required>
+          <input id="contactEmail" type="email" placeholder="Email address" required>
+          <textarea id="contactMessage" rows="4" placeholder="Your message" required></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="logo" href="#home"><span>TIME</span>VAULT</a><p>Timeless watches. Modern confidence.</p></div>
+      <div><strong>Quick Links</strong><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      <div><strong>Project</strong><p>Static e-commerce demo</p><p>© <span id="year"></span> TIMEVAULT</p></div>
+    </div>
+  </footer>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+    <div class="cart-head"><h2>Your Cart</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total"><span>Total</span><strong id="cartTotal">Rs. 0</strong></div>
+      <button class="btn primary full" id="checkoutBtn">Checkout</button>
+      <button class="text-btn" id="clearCart">Clear cart</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-card">
+      <button class="modal-close" data-close="checkoutModal">×</button>
+      <p class="eyebrow">SECURE CHECKOUT</p>
+      <h2>Complete your order</h2>
+      <form id="checkoutForm">
+        <input id="orderName" required placeholder="Full name">
+        <input id="orderPhone" required placeholder="Phone number">
+        <input id="orderAddress" required placeholder="Delivery address">
+        <select id="orderPayment" required>
+          <option value="">Payment method</option>
+          <option>Cash on Delivery</option>
+          <option>Bank Transfer</option>
+        </select>
+        <div class="checkout-summary" id="checkoutSummary"></div>
+        <button class="btn primary full" type="submit">Place Demo Order</button>
+      </form>
+      <small class="demo-note">This is a front-end school project. No real payment is processed.</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
